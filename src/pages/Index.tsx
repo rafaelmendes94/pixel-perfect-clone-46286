@@ -1,5 +1,5 @@
 import { useState } from "react";
-import bgHeader from "@/assets/versio/background-header_1b8967bd0222.png";
+import bgHeader from "@/assets/versio/hero-neymar.png";
 import bgFooter from "@/assets/versio/background-footer_3d0938a766fd.png";
 import lateralDark from "@/assets/versio/lateral-dark-mode_2266b9c0b713.png";
 import avatarMan from "@/assets/versio/image_6e1f787d00c0.png";
