@@ -313,9 +313,9 @@ const Index = () => {
               <span className="opacity-60">© 2025</span>
             </div>
             <div className="flex items-center gap-6 text-[12px] text-white/70">
-              <a href="#" className="hover:text-white">Termos de Uso</a>
+              <a href="#" className="hover:text-white">{t.footer.terms}</a>
               <span className="opacity-40">·</span>
-              <a href="#" className="hover:text-white">Política de Privacidade</a>
+              <a href="#" className="hover:text-white">{t.footer.privacy}</a>
             </div>
             <div className="flex items-center gap-2">
               <a href="#" aria-label="Instagram" className="flex h-8 w-8 items-center justify-center rounded-sm bg-white/10 hover:bg-white/20">
