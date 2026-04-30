@@ -280,9 +280,9 @@ const Index = () => {
       {/* Process steps */}
       <section className="px-6 py-20 lg:px-10">
         <div className="mx-auto max-w-[1200px]">
-          <h2 className="text-center text-[28px] font-bold md:text-[36px]">
+          <Reveal as="h2" className="text-center text-[28px] font-bold md:text-[36px]">
             Um processo simples para tirar suas dúvidas
-          </h2>
+          </Reveal>
           <div className="mt-14 grid gap-10 md:grid-cols-4 md:gap-6">
             {[
               ["Escolha seu especialista", "Encontre quem entende do assunto que você quer aprender ou conversar, baseado nos seus interesses."],
@@ -290,19 +290,19 @@ const Index = () => {
               ["Acompanhe seu progresso", "Crie a sua própria trilha de aprendizado, fazendo anotações e destacando insights importantes dos seus temas favoritos."],
               ["Expanda suas áreas de interesse", "Tenha uma versão dos seus especialistas favoritos disponíveis 24h para você em diferentes áreas de atuação."],
             ].map(([title, desc], i) => (
-              <div key={i}>
-                <div className="mb-4 border-t border-foreground/30 pt-4 flex items-center gap-3">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-sm bg-chip-pink text-[12px] font-bold text-foreground">
+              <Reveal key={i} delay={i * 120} className="group">
+                <div className="mb-4 border-t border-foreground/30 pt-4 flex items-center gap-3 transition-colors duration-300 group-hover:border-primary">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-sm bg-chip-pink text-[12px] font-bold text-foreground transition-transform duration-300 ease-out-expo group-hover:scale-110">
                     {i + 1}
                   </span>
                   <h3 className="text-[14px] font-bold">{title}</h3>
                 </div>
                 <p className="text-[13px] leading-relaxed text-foreground/75">{desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
           <div className="mt-14 flex justify-center">
-            <button className="rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90">
+            <button className="rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:tracking-wider hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)]">
               CONVERSE AGORA
             </button>
           </div>
