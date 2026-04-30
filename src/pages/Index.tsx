@@ -347,7 +347,7 @@ const Index = () => {
         <div className="bg-dark-bg text-dark-fg">
           <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-4 px-6 py-5 md:flex-row md:justify-between lg:px-10">
             <div className="flex items-center gap-4 text-[12px] text-white/70">
-              <VersioLogo className="text-white" />
+              <VersioLogo invert />
               <span className="h-6 w-px bg-white/25" />
               <img src={njrLogo} alt="NJR Edutech" className="h-8 w-auto" />
               <span className="opacity-60">© 2025</span>
