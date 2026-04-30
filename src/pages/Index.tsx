@@ -222,7 +222,7 @@ const Index = () => {
         <img
           src={lateralDark}
           alt=""
-          className="pointer-events-none absolute right-0 top-0 h-full w-auto opacity-90"
+          className="pointer-events-none absolute right-0 top-0 hidden h-full w-auto opacity-90 md:block"
         />
         <div className="relative mx-auto max-w-[1400px] px-6 py-20 lg:px-10 lg:py-28">
           <p className="mb-12 text-center text-[13px] font-semibold tracking-[0.1em] text-primary">
