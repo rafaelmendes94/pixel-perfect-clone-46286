@@ -312,30 +312,30 @@ const Index = () => {
       {/* Connect / community */}
       <section className="px-6 pt-8 pb-20 md:py-20 lg:px-10">
         <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-2">
-          <div>
+          <Reveal>
             <h2 className="text-[40px] font-bold leading-[1.05] tracking-tight md:text-[52px]">
               Conecte seu conhecimento à comunidade que importa
             </h2>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/80">
               Compartilhe seu conhecimento com quem realmente valoriza sua experiência e conecte-se a uma comunidade engajada.
             </p>
-            <button className="mt-8 rounded-sm bg-primary px-8 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90">
+            <button className="mt-8 rounded-sm bg-primary px-8 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:tracking-wider hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)]">
               EXPANDA SUA INFLUÊNCIA
             </button>
-          </div>
+          </Reveal>
           <div className="space-y-8">
             {[
               ["INFLUENCIADORES & CRIADORES", "Transforme sua rotina, dicas e conteúdos em aprendizado interativo. Seus seguidores podem conversar com sua versão avatar, aprendendo de forma personalizada a partir de seus vídeos, textos e postagens."],
               ["PROFISSIONAIS DO MERCADO", "Escale sua presença e complemente cursos, workshops ou serviços. Seus mentorados podem tirar dúvidas e interagir sempre que precisarem, com respostas baseadas no seu conhecimento e estilo único."],
               ["PROFESSORES & ACADÊMICOS", "Alimente a IA com aulas, artigos, pesquisas ou livros. Seus alunos podem continuar interagindo com o conteúdo e manter o diálogo ativo mesmo fora da sala de aula."],
-            ].map(([title, desc]) => (
-              <div key={title}>
+            ].map(([title, desc], idx) => (
+              <Reveal key={title} delay={idx * 150} className="group">
                 <div className="flex items-center gap-2">
-                  <span className="h-3 w-3 bg-primary"></span>
+                  <span className="h-3 w-3 bg-primary transition-transform duration-300 ease-out-expo group-hover:scale-150" />
                   <h3 className="text-[14px] font-bold tracking-wide">{title}</h3>
                 </div>
                 <p className="mt-3 text-[13px] leading-relaxed text-foreground/80">{desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
