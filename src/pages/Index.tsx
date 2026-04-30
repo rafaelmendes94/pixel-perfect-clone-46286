@@ -37,19 +37,13 @@ const Index = () => {
           {/* Desktop nav */}
           <nav className="hidden items-center gap-3 md:flex md:gap-6">
             <a href="#especialista" className="text-[13px] font-semibold tracking-wide text-foreground hover:opacity-70">
-              ME TORNAR ESPECIALISTA
-            </a>
-            <a
-              href="#planos"
-              className="rounded-sm border border-foreground px-4 py-2 text-[13px] font-semibold tracking-wide hover:bg-foreground hover:text-background transition-colors"
-            >
-              PLANOS
+              {t.nav.becomeExpert}
             </a>
             <a
               href="#acessar"
               className="rounded-sm bg-primary px-4 py-2 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90"
             >
-              ACESSAR
+              {t.nav.access}
             </a>
             <div className="flex overflow-hidden rounded-sm border border-border text-[12px] font-semibold">
               <button
@@ -69,7 +63,7 @@ const Index = () => {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen(true)}
-            aria-label="Abrir menu"
+            aria-label={t.nav.openMenu}
             className="md:hidden p-2"
           >
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
