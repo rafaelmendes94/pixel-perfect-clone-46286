@@ -5,6 +5,7 @@ import lateralDark from "@/assets/versio/lateral-dark-mode_2266b9c0b713.png";
 import avatarMan from "@/assets/versio/image_6e1f787d00c0.png";
 import avatarWoman from "@/assets/versio/image_7cba69393704.png";
 import avatarMan2 from "@/assets/versio/image_3ef650545b5c.png";
+import njrLogo from "@/assets/versio/njr-edutech.png";
 
 const VersioLogo = ({ className = "" }: { className?: string }) => (
   <div className={`flex items-center gap-1.5 ${className}`}>
