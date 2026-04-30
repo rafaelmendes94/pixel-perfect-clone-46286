@@ -83,7 +83,7 @@ const Index = () => {
             <div className="flex items-center justify-between px-6 py-5 border-b border-border">
               <span className="w-6" />
               <VersioLogo />
-              <button onClick={() => setMenuOpen(false)} aria-label="Fechar menu" className="p-1">
+              <button onClick={() => setMenuOpen(false)} aria-label={t.nav.closeMenu} className="p-1">
                 <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                   <line x1="6" y1="6" x2="18" y2="18" />
                   <line x1="18" y1="6" x2="6" y2="18" />
@@ -96,21 +96,14 @@ const Index = () => {
                 onClick={() => setMenuOpen(false)}
                 className="text-center text-[13px] font-semibold tracking-wide py-3"
               >
-                ME TORNAR ESPECIALISTA
-              </a>
-              <a
-                href="#planos"
-                onClick={() => setMenuOpen(false)}
-                className="rounded-sm border border-foreground py-3 text-center text-[13px] font-semibold tracking-wide"
-              >
-                PLANOS
+                {t.nav.becomeExpert}
               </a>
               <a
                 href="#acessar"
                 onClick={() => setMenuOpen(false)}
                 className="rounded-sm bg-primary py-3 text-center text-[13px] font-semibold tracking-wide text-primary-foreground"
               >
-                ACESSAR
+                {t.nav.access}
               </a>
               <div className="flex justify-center">
                 <div className="flex overflow-hidden rounded-sm border border-border text-[12px] font-semibold">
