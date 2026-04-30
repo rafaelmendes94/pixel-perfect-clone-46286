@@ -202,7 +202,7 @@ const Index = () => {
             </div>
             <div className="relative shrink-0">
               <img src={avatarWoman} alt="" className="h-10 w-10 rounded-sm" />
-              <span className="absolute -bottom-1 -right-1 rounded-sm bg-primary px-1 text-[9px] font-bold text-primary-foreground">{lang === "PT" ? "IA" : "AI"}</span>
+              <span className="absolute -bottom-1 -right-1 rounded-sm bg-primary px-1 text-[8px] font-bold text-primary-foreground whitespace-nowrap">CHAT VERSIO</span>
             </div>
           </Reveal>
         </div>
