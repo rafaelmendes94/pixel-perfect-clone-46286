@@ -130,14 +130,14 @@ const Index = () => {
       <div className="relative" style={{ height: "100vh" }}>
         <section className="sticky top-0 h-screen w-full overflow-hidden rounded-b-3xl">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+            className="absolute inset-0 bg-contain bg-top bg-no-repeat md:hidden"
             style={{ backgroundImage: `url(${bgHeaderMobile})` }}
           />
           <div
             className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block"
             style={{ backgroundImage: `url(${bgHeader})` }}
           />
-          <div className="relative mx-auto grid h-full max-w-[1400px] items-start gap-10 px-6 text-center md:items-center md:pt-0 md:text-left lg:grid-cols-2 lg:px-10" style={{ paddingTop: "20px" }}>
+          <div className="relative mx-auto grid h-full max-w-[1400px] items-end gap-10 px-6 pb-10 text-center md:items-center md:pb-0 md:pt-0 md:text-left lg:grid-cols-2 lg:px-10">
             <div className="relative z-10 mx-auto md:mx-0 md:!pt-0">
               <p className="mb-4 text-[13px] font-semibold tracking-[0.08em] text-primary md:mb-6 animate-fade-in" style={{ animationDelay: "100ms" }}>
                 {t.hero.tag}
