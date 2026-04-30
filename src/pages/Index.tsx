@@ -250,15 +250,10 @@ const Index = () => {
       <section className="px-6 py-20 lg:px-10">
         <div className="mx-auto max-w-[1200px]">
           <Reveal as="h2" className="text-center text-[28px] font-bold md:text-[36px]">
-            Um processo simples para tirar suas dúvidas
+            {t.process.title}
           </Reveal>
           <div className="mt-14 grid gap-10 md:grid-cols-4 md:gap-6">
-            {[
-              ["Escolha seu especialista", "Encontre quem entende do assunto que você quer aprender ou conversar, baseado nos seus interesses."],
-              ["Converse com versão digital", "Envie suas dúvidas e conte com a opinião segura do seu especialista favorito."],
-              ["Acompanhe seu progresso", "Crie a sua própria trilha de aprendizado, fazendo anotações e destacando insights importantes dos seus temas favoritos."],
-              ["Expanda suas áreas de interesse", "Tenha uma versão dos seus especialistas favoritos disponíveis 24h para você em diferentes áreas de atuação."],
-            ].map(([title, desc], i) => (
+            {t.process.steps.map(([title, desc], i) => (
               <Reveal key={i} delay={i * 120} className="group">
                 <div className="mb-4 border-t border-foreground/30 pt-4 flex items-center gap-3 transition-colors duration-300 group-hover:border-primary">
                   <span className="flex h-6 w-6 items-center justify-center rounded-sm bg-chip-pink text-[12px] font-bold text-foreground transition-transform duration-300 ease-out-expo group-hover:scale-110">
@@ -272,7 +267,7 @@ const Index = () => {
           </div>
           <div className="mt-14 flex justify-center">
             <button className="rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:tracking-wider hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)]">
-              CONVERSE AGORA
+              {t.process.cta}
             </button>
           </div>
         </div>
