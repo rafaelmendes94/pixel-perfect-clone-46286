@@ -271,21 +271,18 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="relative">
-        {/* Skyline of vertical bars using bg image */}
+        {/* Skyline of solid black vertical bars */}
         <div
           aria-hidden
-          className="relative h-[140px] w-full overflow-hidden md:h-[180px]"
+          className="relative h-[120px] w-full overflow-hidden md:h-[160px]"
           style={{
-            backgroundImage: `url(${bgFooter})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundColor: "hsl(var(--dark-bg))",
             WebkitMaskImage:
               "linear-gradient(to right, transparent 0%, transparent 1%, black 1%, black 3%, transparent 3%, transparent 6%, black 6%, black 9%, transparent 9%, transparent 13%, black 13%, black 18%, transparent 18%, transparent 22%, black 22%, black 24%, transparent 24%, transparent 32%, black 32%, black 35%, transparent 35%, transparent 41%, black 41%, black 45%, transparent 45%, transparent 50%, black 50%, black 53%, transparent 53%, transparent 60%, black 60%, black 63%, transparent 63%, transparent 70%, black 70%, black 76%, transparent 76%, transparent 80%, black 80%, black 84%, transparent 84%, transparent 88%, black 88%, black 95%, transparent 95%, transparent 97%, black 97%, black 99%, transparent 99%)",
             maskImage:
               "linear-gradient(to right, transparent 0%, transparent 1%, black 1%, black 3%, transparent 3%, transparent 6%, black 6%, black 9%, transparent 9%, transparent 13%, black 13%, black 18%, transparent 18%, transparent 22%, black 22%, black 24%, transparent 24%, transparent 32%, black 32%, black 35%, transparent 35%, transparent 41%, black 41%, black 45%, transparent 45%, transparent 50%, black 50%, black 53%, transparent 53%, transparent 60%, black 60%, black 63%, transparent 63%, transparent 70%, black 70%, black 76%, transparent 76%, transparent 80%, black 80%, black 84%, transparent 84%, transparent 88%, black 88%, black 95%, transparent 95%, transparent 97%, black 97%, black 99%, transparent 99%)",
           }}
         >
-          {/* Bottom alignment bar */}
           <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-dark-bg" style={{ WebkitMaskImage: "none", maskImage: "none" }} />
         </div>
 
