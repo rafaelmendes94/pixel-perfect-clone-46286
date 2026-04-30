@@ -188,21 +188,21 @@ const Index = () => {
       <section className="relative z-10 -mt-8 rounded-t-3xl bg-background px-6 py-20 lg:px-10">
 
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-[26px] font-bold leading-tight md:text-[34px]">
+          <Reveal as="h2" className="text-[26px] font-bold leading-tight md:text-[34px]">
             Aprenda no seu ritmo, com quem você admira, em conversas que geram resultados baseados no conteúdo e identidade do especialista.
-          </h2>
+          </Reveal>
         </div>
 
         <div className="mx-auto mt-16 max-w-3xl space-y-6">
           {/* Incoming */}
-          <div className="flex items-end gap-3">
+          <Reveal className="flex items-end gap-3" delay={100}>
             <img src={avatarMan} alt="" className="h-10 w-10 shrink-0 rounded-sm" />
             <div className="rounded-2xl rounded-bl-sm bg-primary px-5 py-3 text-[14px] text-primary-foreground max-w-md">
               Acho que quero sentir que minhas ações têm propósito, sabe? Que não estou só apagando incêndios.
             </div>
-          </div>
+          </Reveal>
           {/* Outgoing */}
-          <div className="flex items-start justify-end gap-3">
+          <Reveal className="flex items-start justify-end gap-3" delay={300}>
             <div className="flex flex-col items-end gap-2 max-w-md">
               <div className="rounded-2xl rounded-br-sm bg-secondary px-5 py-2 text-[14px]">
                 Perfeito
@@ -215,7 +215,7 @@ const Index = () => {
               <img src={avatarWoman} alt="" className="h-10 w-10 rounded-sm" />
               <span className="absolute -bottom-1 -right-1 rounded-sm bg-primary px-1 text-[9px] font-bold text-primary-foreground">IA</span>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
