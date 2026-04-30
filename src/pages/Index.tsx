@@ -1,5 +1,6 @@
 import { useState } from "react";
 import bgHeader from "@/assets/versio/hero-neymar.png";
+import bgHeaderMobile from "@/assets/versio/hero-neymar-mobile.png";
 import bgFooter from "@/assets/versio/background-footer_3d0938a766fd.png";
 import lateralDark from "@/assets/versio/lateral-dark-mode_2266b9c0b713.png";
 import avatarMan from "@/assets/versio/image_6e1f787d00c0.png";
@@ -65,16 +66,21 @@ const Index = () => {
 
       {/* Hero (sticky parallax) */}
       <div className="relative" style={{ height: "100vh" }}>
-        <section
-          className="sticky top-0 h-screen w-full overflow-hidden rounded-b-3xl bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${bgHeader})` }}
-        >
-          <div className="mx-auto grid h-full max-w-[1400px] items-center gap-10 px-6 lg:grid-cols-2 lg:px-10">
+        <section className="sticky top-0 h-screen w-full overflow-hidden rounded-b-3xl">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+            style={{ backgroundImage: `url(${bgHeaderMobile})` }}
+          />
+          <div
+            className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block"
+            style={{ backgroundImage: `url(${bgHeader})` }}
+          />
+          <div className="relative mx-auto grid h-full max-w-[1400px] items-start gap-10 px-6 pt-10 md:items-center md:pt-0 lg:grid-cols-2 lg:px-10">
             <div className="relative z-10">
               <p className="mb-6 text-[13px] font-semibold tracking-[0.08em] text-primary">
                 ESPECIALISTA COM IA
               </p>
-              <h1 className="text-[44px] font-bold leading-[1.05] tracking-tight md:text-[56px] lg:text-[64px]">
+              <h1 className="text-[36px] font-bold leading-[1.05] tracking-tight md:text-[56px] lg:text-[64px]">
                 Tem uma dúvida ou quer aprender algo novo? Fale com a IA de um especialista de verdade.
               </h1>
               <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/80">
