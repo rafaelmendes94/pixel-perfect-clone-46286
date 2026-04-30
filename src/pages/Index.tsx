@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
+import { translations, type Lang } from "@/lib/i18n";
 import bgHeader from "@/assets/versio/hero-neymar.png";
 import bgHeaderMobile from "@/assets/versio/hero-neymar-mobile.png";
 import bgFooter from "@/assets/versio/background-footer_3d0938a766fd.png";
@@ -21,8 +22,9 @@ const VersioLogo = ({ className = "", invert = false }: { className?: string; in
 
 const Index = () => {
   const [email, setEmail] = useState("");
-  const [lang, setLang] = useState<"PT" | "EN">("PT");
+  const [lang, setLang] = useState<Lang>("PT");
   const [menuOpen, setMenuOpen] = useState(false);
+  const t = translations[lang];
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
@@ -35,19 +37,13 @@ const Index = () => {
           {/* Desktop nav */}
           <nav className="hidden items-center gap-3 md:flex md:gap-6">
             <a href="#especialista" className="text-[13px] font-semibold tracking-wide text-foreground hover:opacity-70">
-              ME TORNAR ESPECIALISTA
-            </a>
-            <a
-              href="#planos"
-              className="rounded-sm border border-foreground px-4 py-2 text-[13px] font-semibold tracking-wide hover:bg-foreground hover:text-background transition-colors"
-            >
-              PLANOS
+              {t.nav.becomeExpert}
             </a>
             <a
               href="#acessar"
               className="rounded-sm bg-primary px-4 py-2 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90"
             >
-              ACESSAR
+              {t.nav.access}
             </a>
             <div className="flex overflow-hidden rounded-sm border border-border text-[12px] font-semibold">
               <button
@@ -67,7 +63,7 @@ const Index = () => {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen(true)}
-            aria-label="Abrir menu"
+            aria-label={t.nav.openMenu}
             className="md:hidden p-2"
           >
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
@@ -87,7 +83,7 @@ const Index = () => {
             <div className="flex items-center justify-between px-6 py-5 border-b border-border">
               <span className="w-6" />
               <VersioLogo />
-              <button onClick={() => setMenuOpen(false)} aria-label="Fechar menu" className="p-1">
+              <button onClick={() => setMenuOpen(false)} aria-label={t.nav.closeMenu} className="p-1">
                 <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                   <line x1="6" y1="6" x2="18" y2="18" />
                   <line x1="18" y1="6" x2="6" y2="18" />
@@ -100,21 +96,14 @@ const Index = () => {
                 onClick={() => setMenuOpen(false)}
                 className="text-center text-[13px] font-semibold tracking-wide py-3"
               >
-                ME TORNAR ESPECIALISTA
-              </a>
-              <a
-                href="#planos"
-                onClick={() => setMenuOpen(false)}
-                className="rounded-sm border border-foreground py-3 text-center text-[13px] font-semibold tracking-wide"
-              >
-                PLANOS
+                {t.nav.becomeExpert}
               </a>
               <a
                 href="#acessar"
                 onClick={() => setMenuOpen(false)}
                 className="rounded-sm bg-primary py-3 text-center text-[13px] font-semibold tracking-wide text-primary-foreground"
               >
-                ACESSAR
+                {t.nav.access}
               </a>
               <div className="flex justify-center">
                 <div className="flex overflow-hidden rounded-sm border border-border text-[12px] font-semibold">
@@ -151,13 +140,13 @@ const Index = () => {
           <div className="relative mx-auto grid h-full max-w-[1400px] items-start gap-10 px-6 text-center md:items-center md:pt-0 md:text-left lg:grid-cols-2 lg:px-10" style={{ paddingTop: "20px" }}>
             <div className="relative z-10 mx-auto md:mx-0 md:!pt-0">
               <p className="mb-4 text-[13px] font-semibold tracking-[0.08em] text-primary md:mb-6 animate-fade-in" style={{ animationDelay: "100ms" }}>
-                ESPECIALISTA COM IA
+                {t.hero.tag}
               </p>
               <h1 className="text-[28px] font-bold leading-[1.1] tracking-tight md:text-[56px] lg:text-[64px] animate-blur-in" style={{ animationDelay: "200ms" }}>
-                Tem uma dúvida ou quer aprender algo novo? Fale com a IA de um especialista de verdade.
+                {t.hero.title}
               </h1>
               <p className="mx-auto mt-4 max-w-md text-[14px] leading-relaxed text-foreground/80 md:mx-0 md:mt-6 md:text-[15px] animate-fade-up" style={{ animationDelay: "550ms" }}>
-                Uma inteligência artificial com conteúdo criado por quem é autoridade no assunto. Rápido, confiável e direto ao ponto
+                {t.hero.desc}
               </p>
               <form
                 onSubmit={(e) => e.preventDefault()}
@@ -168,14 +157,14 @@ const Index = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="e-mail"
+                  placeholder={t.hero.emailPlaceholder}
                   className="flex-1 bg-transparent px-4 py-3 text-[14px] outline-none placeholder:text-muted-foreground"
                 />
                 <button
                   type="submit"
                   className="bg-primary px-6 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:opacity-90 hover:tracking-wider"
                 >
-                  COMECE AGORA
+                  {t.hero.cta}
                 </button>
               </form>
             </div>
@@ -189,7 +178,7 @@ const Index = () => {
 
         <div className="mx-auto max-w-3xl text-center">
           <Reveal as="h2" className="text-[26px] font-bold leading-tight md:text-[34px]">
-            Aprenda no seu ritmo, com quem você admira, em conversas que geram resultados baseados no conteúdo e identidade do especialista.
+            {t.chat.title}
           </Reveal>
         </div>
 
@@ -198,22 +187,22 @@ const Index = () => {
           <Reveal className="flex items-end gap-3" delay={100}>
             <img src={avatarMan} alt="" className="h-10 w-10 shrink-0 rounded-sm" />
             <div className="rounded-2xl rounded-bl-sm bg-primary px-5 py-3 text-[14px] text-primary-foreground max-w-md">
-              Acho que quero sentir que minhas ações têm propósito, sabe? Que não estou só apagando incêndios.
+              {t.chat.incoming}
             </div>
           </Reveal>
           {/* Outgoing */}
           <Reveal className="flex items-start justify-end gap-3" delay={300}>
             <div className="flex flex-col items-end gap-2 max-w-md">
               <div className="rounded-2xl rounded-br-sm bg-secondary px-5 py-2 text-[14px]">
-                Perfeito
+                {t.chat.outgoing1}
               </div>
               <div className="rounded-2xl rounded-br-sm bg-secondary px-5 py-3 text-[14px]">
-                O primeiro passo é separar o que é importante do que é apenas barulhento. Nem tudo merece atenção.
+                {t.chat.outgoing2}
               </div>
             </div>
             <div className="relative shrink-0">
               <img src={avatarWoman} alt="" className="h-10 w-10 rounded-sm" />
-              <span className="absolute -bottom-1 -right-1 rounded-sm bg-primary px-1 text-[9px] font-bold text-primary-foreground">IA</span>
+              <span className="absolute -bottom-1 -right-1 rounded-sm bg-primary px-1 text-[9px] font-bold text-primary-foreground">{lang === "PT" ? "IA" : "AI"}</span>
             </div>
           </Reveal>
         </div>
@@ -228,31 +217,11 @@ const Index = () => {
         />
         <div className="relative mx-auto max-w-[1400px] px-6 py-20 lg:px-10 lg:py-28">
           <p className="mb-12 text-center text-[13px] font-semibold tracking-[0.1em] text-primary">
-            PARA AQUELES QUE BUSCAM RESPOSTAS REAIS
+            {t.dark.tag}
           </p>
           <div className="border-t border-white/15 pt-12">
             <div className="grid gap-12 md:grid-cols-3 md:gap-8">
-              {[
-                {
-                  title: "CHEGA DE USAR IAS COM FONTES DESCONHECIDAS",
-                  items: [
-                    "Esqueça respostas de fontes desconhecidas. Você conversa com a versão digital de criadores de conteúdo que você conhece, confia e acompanha, especialistas em diversos temas.",
-                  ],
-                },
-                {
-                  title: "UMA NOVA FORMA DE APRENDER E TIRAR SUAS DÚVIDAS",
-                  items: [
-                    "Esqueça o conteúdo estático. Aqui você interage diretamente com seu criador de conteúdo favorito.",
-                    "Não existe script. Você pergunta livremente, e as respostas vêm do conhecimento e da forma única de cada especialista.",
-                  ],
-                },
-                {
-                  title: "PROTEÇÃO E PRIVACIDADE PARA SUAS CONVERSAS",
-                  items: [
-                    "Pergunte o que quiser com segurança. Seus dados são criptografados e suas conversas são privadas até dos próprios especialistas.",
-                  ],
-                },
-              ].map((col, idx) => (
+              {t.dark.cols.map((col, idx) => (
                 <Reveal key={col.title} delay={idx * 150} className="max-w-xs mx-auto md:mx-0">
                   <h3 className="text-center text-[14px] font-bold leading-snug tracking-wide">
                     {col.title}
@@ -270,7 +239,7 @@ const Index = () => {
             </div>
             <div className="mt-16 flex justify-center border-t border-white/15 pt-12">
               <button className="group relative overflow-hidden rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:tracking-wider hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)]">
-                ASSINAR AGORA
+                {t.dark.cta}
               </button>
             </div>
           </div>
@@ -281,15 +250,10 @@ const Index = () => {
       <section className="px-6 py-20 lg:px-10">
         <div className="mx-auto max-w-[1200px]">
           <Reveal as="h2" className="text-center text-[28px] font-bold md:text-[36px]">
-            Um processo simples para tirar suas dúvidas
+            {t.process.title}
           </Reveal>
           <div className="mt-14 grid gap-10 md:grid-cols-4 md:gap-6">
-            {[
-              ["Escolha seu especialista", "Encontre quem entende do assunto que você quer aprender ou conversar, baseado nos seus interesses."],
-              ["Converse com versão digital", "Envie suas dúvidas e conte com a opinião segura do seu especialista favorito."],
-              ["Acompanhe seu progresso", "Crie a sua própria trilha de aprendizado, fazendo anotações e destacando insights importantes dos seus temas favoritos."],
-              ["Expanda suas áreas de interesse", "Tenha uma versão dos seus especialistas favoritos disponíveis 24h para você em diferentes áreas de atuação."],
-            ].map(([title, desc], i) => (
+            {t.process.steps.map(([title, desc], i) => (
               <Reveal key={i} delay={i * 120} className="group">
                 <div className="mb-4 border-t border-foreground/30 pt-4 flex items-center gap-3 transition-colors duration-300 group-hover:border-primary">
                   <span className="flex h-6 w-6 items-center justify-center rounded-sm bg-chip-pink text-[12px] font-bold text-foreground transition-transform duration-300 ease-out-expo group-hover:scale-110">
@@ -303,7 +267,7 @@ const Index = () => {
           </div>
           <div className="mt-14 flex justify-center">
             <button className="rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:tracking-wider hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)]">
-              CONVERSE AGORA
+              {t.process.cta}
             </button>
           </div>
         </div>
@@ -314,21 +278,17 @@ const Index = () => {
         <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-2">
           <Reveal>
             <h2 className="text-[40px] font-bold leading-[1.05] tracking-tight md:text-[52px]">
-              Conecte seu conhecimento à comunidade que importa
+              {t.community.title}
             </h2>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/80">
-              Compartilhe seu conhecimento com quem realmente valoriza sua experiência e conecte-se a uma comunidade engajada.
+              {t.community.desc}
             </p>
             <button className="mt-8 rounded-sm bg-primary px-8 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:tracking-wider hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)]">
-              EXPANDA SUA INFLUÊNCIA
+              {t.community.cta}
             </button>
           </Reveal>
           <div className="space-y-8">
-            {[
-              ["INFLUENCIADORES & CRIADORES", "Transforme sua rotina, dicas e conteúdos em aprendizado interativo. Seus seguidores podem conversar com sua versão avatar, aprendendo de forma personalizada a partir de seus vídeos, textos e postagens."],
-              ["PROFISSIONAIS DO MERCADO", "Escale sua presença e complemente cursos, workshops ou serviços. Seus mentorados podem tirar dúvidas e interagir sempre que precisarem, com respostas baseadas no seu conhecimento e estilo único."],
-              ["PROFESSORES & ACADÊMICOS", "Alimente a IA com aulas, artigos, pesquisas ou livros. Seus alunos podem continuar interagindo com o conteúdo e manter o diálogo ativo mesmo fora da sala de aula."],
-            ].map(([title, desc], idx) => (
+            {t.community.items.map(([title, desc], idx) => (
               <Reveal key={title} delay={idx * 150} className="group">
                 <div className="flex items-center gap-2">
                   <span className="h-3 w-3 bg-primary transition-transform duration-300 ease-out-expo group-hover:scale-150" />
@@ -353,9 +313,9 @@ const Index = () => {
               <span className="opacity-60">© 2025</span>
             </div>
             <div className="flex items-center gap-6 text-[12px] text-white/70">
-              <a href="#" className="hover:text-white">Termos de Uso</a>
+              <a href="#" className="hover:text-white">{t.footer.terms}</a>
               <span className="opacity-40">·</span>
-              <a href="#" className="hover:text-white">Política de Privacidade</a>
+              <a href="#" className="hover:text-white">{t.footer.privacy}</a>
             </div>
             <div className="flex items-center gap-2">
               <a href="#" aria-label="Instagram" className="flex h-8 w-8 items-center justify-center rounded-sm bg-white/10 hover:bg-white/20">
