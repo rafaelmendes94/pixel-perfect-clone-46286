@@ -308,7 +308,7 @@ const Index = () => {
       </section>
 
       {/* Connect / community */}
-      <section className="px-6 py-20 lg:px-10">
+      <section className="px-6 pt-8 pb-20 md:py-20 lg:px-10">
         <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-2">
           <div>
             <h2 className="text-[40px] font-bold leading-[1.05] tracking-tight md:text-[52px]">
