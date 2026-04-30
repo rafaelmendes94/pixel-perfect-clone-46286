@@ -21,6 +21,7 @@ const VersioLogo = ({ className = "" }: { className?: string }) => (
 const Index = () => {
   const [email, setEmail] = useState("");
   const [lang, setLang] = useState<"PT" | "EN">("PT");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
@@ -30,8 +31,9 @@ const Index = () => {
           <a href="/" aria-label="versio">
             <VersioLogo />
           </a>
-          <nav className="flex items-center gap-3 md:gap-6">
-            <a href="#especialista" className="hidden text-[13px] font-semibold tracking-wide text-foreground hover:opacity-70 md:inline-block">
+          {/* Desktop nav */}
+          <nav className="hidden items-center gap-3 md:flex md:gap-6">
+            <a href="#especialista" className="text-[13px] font-semibold tracking-wide text-foreground hover:opacity-70">
               ME TORNAR ESPECIALISTA
             </a>
             <a
@@ -61,8 +63,78 @@ const Index = () => {
               </button>
             </div>
           </nav>
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMenuOpen(true)}
+            aria-label="Abrir menu"
+            className="md:hidden p-2"
+          >
+            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+              <line x1="3" y1="7" x2="21" y2="7" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="17" x2="21" y2="17" />
+            </svg>
+          </button>
         </div>
       </header>
+
+      {/* Mobile menu overlay */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          <div className="absolute inset-0 bg-dark-bg/40" onClick={() => setMenuOpen(false)} />
+          <div className="relative bg-background shadow-xl">
+            <div className="flex items-center justify-between px-6 py-5 border-b border-border">
+              <span className="w-6" />
+              <VersioLogo />
+              <button onClick={() => setMenuOpen(false)} aria-label="Fechar menu" className="p-1">
+                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                </svg>
+              </button>
+            </div>
+            <div className="flex flex-col gap-4 px-6 py-8">
+              <a
+                href="#especialista"
+                onClick={() => setMenuOpen(false)}
+                className="text-center text-[13px] font-semibold tracking-wide py-3"
+              >
+                ME TORNAR ESPECIALISTA
+              </a>
+              <a
+                href="#planos"
+                onClick={() => setMenuOpen(false)}
+                className="rounded-sm border border-foreground py-3 text-center text-[13px] font-semibold tracking-wide"
+              >
+                PLANOS
+              </a>
+              <a
+                href="#acessar"
+                onClick={() => setMenuOpen(false)}
+                className="rounded-sm bg-primary py-3 text-center text-[13px] font-semibold tracking-wide text-primary-foreground"
+              >
+                ACESSAR
+              </a>
+              <div className="flex justify-center">
+                <div className="flex overflow-hidden rounded-sm border border-border text-[12px] font-semibold">
+                  <button
+                    onClick={() => setLang("PT")}
+                    className={`px-4 py-1.5 ${lang === "PT" ? "bg-primary text-primary-foreground" : "bg-background"}`}
+                  >
+                    PT
+                  </button>
+                  <button
+                    onClick={() => setLang("EN")}
+                    className={`px-4 py-1.5 ${lang === "EN" ? "bg-primary text-primary-foreground" : "bg-background"}`}
+                  >
+                    EN
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Hero (sticky parallax) */}
       <div className="relative" style={{ height: "100vh" }}>
