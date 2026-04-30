@@ -252,8 +252,8 @@ const Index = () => {
                     "Pergunte o que quiser com segurança. Seus dados são criptografados e suas conversas são privadas até dos próprios especialistas.",
                   ],
                 },
-              ].map((col) => (
-                <div key={col.title} className="max-w-xs mx-auto md:mx-0">
+              ].map((col, idx) => (
+                <Reveal key={col.title} delay={idx * 150} className="max-w-xs mx-auto md:mx-0">
                   <h3 className="text-center text-[14px] font-bold leading-snug tracking-wide">
                     {col.title}
                   </h3>
@@ -265,11 +265,11 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </Reveal>
               ))}
             </div>
             <div className="mt-16 flex justify-center border-t border-white/15 pt-12">
-              <button className="rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90">
+              <button className="group relative overflow-hidden rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:tracking-wider hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)]">
                 ASSINAR AGORA
               </button>
             </div>
