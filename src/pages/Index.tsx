@@ -66,7 +66,7 @@ const Index = () => {
       {/* Hero (sticky parallax) */}
       <div className="relative" style={{ height: "100vh" }}>
         <section
-          className="sticky top-0 h-screen w-full overflow-hidden rounded-3xl bg-cover bg-center bg-no-repeat"
+          className="sticky top-0 h-screen w-full overflow-hidden rounded-b-3xl bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${bgHeader})` }}
         >
           <div className="mx-auto grid h-full max-w-[1400px] items-center gap-10 px-6 lg:grid-cols-2 lg:px-10">
