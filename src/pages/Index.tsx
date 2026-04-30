@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
+import { translations, type Lang } from "@/lib/i18n";
 import bgHeader from "@/assets/versio/hero-neymar.png";
 import bgHeaderMobile from "@/assets/versio/hero-neymar-mobile.png";
 import bgFooter from "@/assets/versio/background-footer_3d0938a766fd.png";
