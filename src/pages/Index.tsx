@@ -152,10 +152,10 @@ const Index = () => {
               <p className="mb-6 text-[13px] font-semibold tracking-[0.08em] text-primary">
                 ESPECIALISTA COM IA
               </p>
-              <h1 className="text-[36px] font-bold leading-[1.05] tracking-tight md:text-[56px] lg:text-[64px]">
+              <h1 className="text-[24px] font-bold leading-[1.1] tracking-tight md:text-[56px] lg:text-[64px]">
                 Tem uma dúvida ou quer aprender algo novo? Fale com a IA de um especialista de verdade.
               </h1>
-              <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/80">
+              <p className="mt-4 max-w-md text-[12px] leading-relaxed text-foreground/80 md:mt-6 md:text-[15px]">
                 Uma inteligência artificial com conteúdo criado por quem é autoridade no assunto. Rápido, confiável e direto ao ponto
               </p>
               <form
