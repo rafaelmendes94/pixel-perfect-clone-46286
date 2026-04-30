@@ -147,16 +147,8 @@ const Index = () => {
             className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat md:block"
             style={{ backgroundImage: `url(${bgHeader})` }}
           />
-          {/* Gradient overlay for readability (mobile) */}
-          <div
-            className="absolute inset-0 md:hidden"
-            style={{
-              background:
-                "linear-gradient(to bottom, hsl(var(--background) / 0.85) 0%, hsl(var(--background) / 0.5) 30%, transparent 60%, hsl(var(--background) / 0.5) 90%)",
-            }}
-          />
-          <div className="relative mx-auto grid h-full max-w-[1400px] items-start gap-10 px-6 pt-16 text-center md:items-center md:pt-0 md:text-left lg:grid-cols-2 lg:px-10">
-            <div className="relative z-10 mx-auto md:mx-0">
+          <div className="relative mx-auto grid h-full max-w-[1400px] items-start gap-10 px-6 text-center md:items-center md:pt-0 md:text-left lg:grid-cols-2 lg:px-10" style={{ paddingTop: "20px" }}>
+            <div className="relative z-10 mx-auto md:mx-0 md:!pt-0">
               <p className="mb-4 text-[13px] font-semibold tracking-[0.08em] text-primary md:mb-6">
                 ESPECIALISTA COM IA
               </p>
