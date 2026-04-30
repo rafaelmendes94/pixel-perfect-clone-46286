@@ -7,9 +7,9 @@ export const translations = {
       closeMenu: "Fechar menu",
     },
     hero: {
-      tag: "ESPECIALISTA COM IA",
-      title: "Tem uma dúvida ou quer aprender algo novo? Fale com a IA de um especialista de verdade.",
-      desc: "Uma inteligência artificial com conteúdo criado por quem é autoridade no assunto. Rápido, confiável e direto ao ponto",
+      tag: "ESPECIALISTA COM CHAT VERSIO",
+      title: "Tem uma dúvida ou quer aprender algo novo? Fale com o CHAT VERSIO de um especialista de verdade.",
+      desc: "Um CHAT VERSIO com conteúdo criado por quem é autoridade no assunto. Rápido, confiável e direto ao ponto",
       emailPlaceholder: "e-mail",
       cta: "COMECE AGORA",
     },
@@ -23,7 +23,7 @@ export const translations = {
       tag: "PARA AQUELES QUE BUSCAM RESPOSTAS REAIS",
       cols: [
         {
-          title: "CHEGA DE USAR IAS COM FONTES DESCONHECIDAS",
+          title: "CHEGA DE USAR CHAT VERSIO COM FONTES DESCONHECIDAS",
           items: [
             "Esqueça respostas de fontes desconhecidas. Você conversa com a versão digital de criadores de conteúdo que você conhece, confia e acompanha, especialistas em diversos temas.",
           ],
@@ -61,7 +61,7 @@ export const translations = {
       items: [
         ["INFLUENCIADORES & CRIADORES", "Transforme sua rotina, dicas e conteúdos em aprendizado interativo. Seus seguidores podem conversar com sua versão avatar, aprendendo de forma personalizada a partir de seus vídeos, textos e postagens."],
         ["PROFISSIONAIS DO MERCADO", "Escale sua presença e complemente cursos, workshops ou serviços. Seus mentorados podem tirar dúvidas e interagir sempre que precisarem, com respostas baseadas no seu conhecimento e estilo único."],
-        ["PROFESSORES & ACADÊMICOS", "Alimente a IA com aulas, artigos, pesquisas ou livros. Seus alunos podem continuar interagindo com o conteúdo e manter o diálogo ativo mesmo fora da sala de aula."],
+        ["PROFESSORES & ACADÊMICOS", "Alimente o CHAT VERSIO com aulas, artigos, pesquisas ou livros. Seus alunos podem continuar interagindo com o conteúdo e manter o diálogo ativo mesmo fora da sala de aula."],
       ] as [string, string][],
     },
     footer: {
@@ -77,9 +77,9 @@ export const translations = {
       closeMenu: "Close menu",
     },
     hero: {
-      tag: "AI EXPERT",
-      title: "Got a question or want to learn something new? Talk to the AI of a real expert.",
-      desc: "An artificial intelligence with content created by those who are authorities on the subject. Fast, reliable and straight to the point",
+      tag: "CHAT VERSIO EXPERT",
+      title: "Got a question or want to learn something new? Talk to the CHAT VERSIO of a real expert.",
+      desc: "A CHAT VERSIO with content created by those who are authorities on the subject. Fast, reliable and straight to the point",
       emailPlaceholder: "e-mail",
       cta: "GET STARTED",
     },
@@ -93,7 +93,7 @@ export const translations = {
       tag: "FOR THOSE LOOKING FOR REAL ANSWERS",
       cols: [
         {
-          title: "NO MORE AIs WITH UNKNOWN SOURCES",
+          title: "NO MORE CHAT VERSIO WITH UNKNOWN SOURCES",
           items: [
             "Forget answers from unknown sources. You talk to the digital version of content creators you know, trust and follow — experts on a wide range of topics.",
           ],
@@ -131,7 +131,7 @@ export const translations = {
       items: [
         ["INFLUENCERS & CREATORS", "Turn your routine, tips and content into interactive learning. Your followers can chat with your avatar version, learning in a personalized way from your videos, texts and posts."],
         ["MARKET PROFESSIONALS", "Scale your presence and complement courses, workshops or services. Your mentees can ask questions and interact whenever they need, with answers based on your knowledge and unique style."],
-        ["TEACHERS & ACADEMICS", "Feed the AI with classes, articles, research or books. Your students can keep interacting with the content and maintain an active dialogue even outside the classroom."],
+        ["TEACHERS & ACADEMICS", "Feed the CHAT VERSIO with classes, articles, research or books. Your students can keep interacting with the content and maintain an active dialogue even outside the classroom."],
       ] as [string, string][],
     },
     footer: {
