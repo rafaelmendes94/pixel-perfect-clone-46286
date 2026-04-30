@@ -150,18 +150,19 @@ const Index = () => {
           />
           <div className="relative mx-auto grid h-full max-w-[1400px] items-start gap-10 px-6 text-center md:items-center md:pt-0 md:text-left lg:grid-cols-2 lg:px-10" style={{ paddingTop: "20px" }}>
             <div className="relative z-10 mx-auto md:mx-0 md:!pt-0">
-              <p className="mb-4 text-[13px] font-semibold tracking-[0.08em] text-primary md:mb-6">
+              <p className="mb-4 text-[13px] font-semibold tracking-[0.08em] text-primary md:mb-6 animate-fade-in" style={{ animationDelay: "100ms" }}>
                 ESPECIALISTA COM IA
               </p>
-              <h1 className="text-[28px] font-bold leading-[1.1] tracking-tight md:text-[56px] lg:text-[64px]">
+              <h1 className="text-[28px] font-bold leading-[1.1] tracking-tight md:text-[56px] lg:text-[64px] animate-blur-in" style={{ animationDelay: "200ms" }}>
                 Tem uma dúvida ou quer aprender algo novo? Fale com a IA de um especialista de verdade.
               </h1>
-              <p className="mx-auto mt-4 max-w-md text-[14px] leading-relaxed text-foreground/80 md:mx-0 md:mt-6 md:text-[15px]">
+              <p className="mx-auto mt-4 max-w-md text-[14px] leading-relaxed text-foreground/80 md:mx-0 md:mt-6 md:text-[15px] animate-fade-up" style={{ animationDelay: "550ms" }}>
                 Uma inteligência artificial com conteúdo criado por quem é autoridade no assunto. Rápido, confiável e direto ao ponto
               </p>
               <form
                 onSubmit={(e) => e.preventDefault()}
-                className="mx-auto mt-6 flex max-w-lg overflow-hidden rounded-sm border border-input bg-background/80 backdrop-blur md:mx-0 md:mt-8"
+                className="mx-auto mt-6 flex max-w-lg overflow-hidden rounded-sm border border-input bg-background/80 backdrop-blur md:mx-0 md:mt-8 animate-fade-up transition-all duration-300 focus-within:border-primary focus-within:shadow-[0_0_0_4px_hsl(var(--primary)/0.12)]"
+                style={{ animationDelay: "700ms" }}
               >
                 <input
                   type="email"
@@ -172,7 +173,7 @@ const Index = () => {
                 />
                 <button
                   type="submit"
-                  className="bg-primary px-6 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90"
+                  className="bg-primary px-6 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:opacity-90 hover:tracking-wider"
                 >
                   COMECE AGORA
                 </button>
