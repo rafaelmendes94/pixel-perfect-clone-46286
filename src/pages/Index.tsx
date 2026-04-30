@@ -64,8 +64,11 @@ const Index = () => {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-[1400px] gap-10 px-6 pb-16 pt-10 lg:grid-cols-2 lg:px-10 lg:pt-16">
+      <section
+        className="relative overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgHeader})` }}
+      >
+        <div className="mx-auto grid max-w-[1400px] gap-10 px-6 pb-24 pt-10 lg:grid-cols-2 lg:px-10 lg:pt-16 min-h-[640px]">
           <div className="relative z-10">
             <p className="mb-6 text-[13px] font-semibold tracking-[0.08em] text-primary">
               ESPECIALISTA COM IA
@@ -78,14 +81,14 @@ const Index = () => {
             </p>
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="mt-8 flex max-w-lg overflow-hidden rounded-sm border border-input"
+              className="mt-8 flex max-w-lg overflow-hidden rounded-sm border border-input bg-background/80 backdrop-blur"
             >
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="e-mail"
-                className="flex-1 bg-background px-4 py-3 text-[14px] outline-none placeholder:text-muted-foreground"
+                className="flex-1 bg-transparent px-4 py-3 text-[14px] outline-none placeholder:text-muted-foreground"
               />
               <button
                 type="submit"
@@ -95,21 +98,7 @@ const Index = () => {
               </button>
             </form>
           </div>
-
-          {/* Right visual */}
-          <div className="relative min-h-[420px] lg:min-h-[560px]">
-            <img
-              src={bgHeader}
-              alt=""
-              className="absolute inset-0 h-full w-full object-contain object-right-top"
-            />
-            {/* Floating avatars */}
-            <img src={avatarWoman} alt="" className="absolute left-[18%] top-[28%] h-16 w-16 md:h-20 md:w-20 rounded-sm shadow-lg" />
-            <img src={avatarMan2} alt="" className="absolute left-[32%] top-[52%] h-20 w-24 md:h-24 md:w-28 rounded-sm shadow-lg object-cover" />
-            <img src={avatarMan} alt="" className="absolute left-[38%] top-[20%] h-14 w-14 md:h-16 md:w-16 rounded-sm shadow-lg" />
-            <img src={avatarMan} alt="" className="absolute left-[52%] top-[44%] h-12 w-12 md:h-14 md:w-14 rounded-sm shadow-lg" />
-            <img src={avatarWoman} alt="" className="absolute left-[60%] top-[64%] h-14 w-14 md:h-16 md:w-16 rounded-sm shadow-lg" />
-          </div>
+          <div aria-hidden className="hidden lg:block" />
         </div>
       </section>
 
