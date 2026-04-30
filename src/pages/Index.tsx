@@ -9,14 +9,14 @@ import avatarWoman from "@/assets/versio/image_7cba69393704.png";
 import avatarMan2 from "@/assets/versio/image_3ef650545b5c.png";
 import njrLogo from "@/assets/versio/njr-edutech.png";
 
-const VersioLogo = ({ className = "" }: { className?: string }) => (
-  <div className={`flex items-center gap-1.5 ${className}`}>
-    <svg viewBox="0 0 32 32" className="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 6 L14 26 L18 26 L22 18 L18 18 L16 22 L8 6 Z" fill="currentColor"/>
-      <circle cx="24" cy="10" r="2" fill="currentColor"/>
-    </svg>
-    <span className="text-[22px] font-medium tracking-tight leading-none">versio</span>
-  </div>
+import logoVersio from "@/assets/versio/logo-versio.avif";
+
+const VersioLogo = ({ className = "", invert = false }: { className?: string; invert?: boolean }) => (
+  <img
+    src={logoVersio}
+    alt="versio"
+    className={`h-6 w-auto ${invert ? "brightness-0 invert" : ""} ${className}`}
+  />
 );
 
 const Index = () => {
