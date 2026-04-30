@@ -21,6 +21,7 @@ const VersioLogo = ({ className = "" }: { className?: string }) => (
 const Index = () => {
   const [email, setEmail] = useState("");
   const [lang, setLang] = useState<"PT" | "EN">("PT");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
