@@ -57,6 +57,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "dark-bg": "hsl(var(--dark-bg))",
+        "dark-fg": "hsl(var(--dark-fg))",
+        "chip-pink": "hsl(var(--chip-pink))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -66,11 +69,6 @@ export default {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
-      colors: {
-        "dark-bg": "hsl(var(--dark-bg))",
-        "dark-fg": "hsl(var(--dark-fg))",
-        "chip-pink": "hsl(var(--chip-pink))",
-      } as any,
       keyframes: {
         "accordion-down": {
           from: {
