@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Reveal } from "@/components/Reveal";
 import bgHeader from "@/assets/versio/hero-neymar.png";
 import bgHeaderMobile from "@/assets/versio/hero-neymar-mobile.png";
 import bgFooter from "@/assets/versio/background-footer_3d0938a766fd.png";
@@ -149,18 +150,19 @@ const Index = () => {
           />
           <div className="relative mx-auto grid h-full max-w-[1400px] items-start gap-10 px-6 text-center md:items-center md:pt-0 md:text-left lg:grid-cols-2 lg:px-10" style={{ paddingTop: "20px" }}>
             <div className="relative z-10 mx-auto md:mx-0 md:!pt-0">
-              <p className="mb-4 text-[13px] font-semibold tracking-[0.08em] text-primary md:mb-6">
+              <p className="mb-4 text-[13px] font-semibold tracking-[0.08em] text-primary md:mb-6 animate-fade-in" style={{ animationDelay: "100ms" }}>
                 ESPECIALISTA COM IA
               </p>
-              <h1 className="text-[28px] font-bold leading-[1.1] tracking-tight md:text-[56px] lg:text-[64px]">
+              <h1 className="text-[28px] font-bold leading-[1.1] tracking-tight md:text-[56px] lg:text-[64px] animate-blur-in" style={{ animationDelay: "200ms" }}>
                 Tem uma dúvida ou quer aprender algo novo? Fale com a IA de um especialista de verdade.
               </h1>
-              <p className="mx-auto mt-4 max-w-md text-[14px] leading-relaxed text-foreground/80 md:mx-0 md:mt-6 md:text-[15px]">
+              <p className="mx-auto mt-4 max-w-md text-[14px] leading-relaxed text-foreground/80 md:mx-0 md:mt-6 md:text-[15px] animate-fade-up" style={{ animationDelay: "550ms" }}>
                 Uma inteligência artificial com conteúdo criado por quem é autoridade no assunto. Rápido, confiável e direto ao ponto
               </p>
               <form
                 onSubmit={(e) => e.preventDefault()}
-                className="mx-auto mt-6 flex max-w-lg overflow-hidden rounded-sm border border-input bg-background/80 backdrop-blur md:mx-0 md:mt-8"
+                className="mx-auto mt-6 flex max-w-lg overflow-hidden rounded-sm border border-input bg-background/80 backdrop-blur md:mx-0 md:mt-8 animate-fade-up transition-all duration-300 focus-within:border-primary focus-within:shadow-[0_0_0_4px_hsl(var(--primary)/0.12)]"
+                style={{ animationDelay: "700ms" }}
               >
                 <input
                   type="email"
@@ -171,7 +173,7 @@ const Index = () => {
                 />
                 <button
                   type="submit"
-                  className="bg-primary px-6 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90"
+                  className="bg-primary px-6 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:opacity-90 hover:tracking-wider"
                 >
                   COMECE AGORA
                 </button>
@@ -186,21 +188,21 @@ const Index = () => {
       <section className="relative z-10 -mt-8 rounded-t-3xl bg-background px-6 py-20 lg:px-10">
 
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-[26px] font-bold leading-tight md:text-[34px]">
+          <Reveal as="h2" className="text-[26px] font-bold leading-tight md:text-[34px]">
             Aprenda no seu ritmo, com quem você admira, em conversas que geram resultados baseados no conteúdo e identidade do especialista.
-          </h2>
+          </Reveal>
         </div>
 
         <div className="mx-auto mt-16 max-w-3xl space-y-6">
           {/* Incoming */}
-          <div className="flex items-end gap-3">
+          <Reveal className="flex items-end gap-3" delay={100}>
             <img src={avatarMan} alt="" className="h-10 w-10 shrink-0 rounded-sm" />
             <div className="rounded-2xl rounded-bl-sm bg-primary px-5 py-3 text-[14px] text-primary-foreground max-w-md">
               Acho que quero sentir que minhas ações têm propósito, sabe? Que não estou só apagando incêndios.
             </div>
-          </div>
+          </Reveal>
           {/* Outgoing */}
-          <div className="flex items-start justify-end gap-3">
+          <Reveal className="flex items-start justify-end gap-3" delay={300}>
             <div className="flex flex-col items-end gap-2 max-w-md">
               <div className="rounded-2xl rounded-br-sm bg-secondary px-5 py-2 text-[14px]">
                 Perfeito
@@ -213,7 +215,7 @@ const Index = () => {
               <img src={avatarWoman} alt="" className="h-10 w-10 rounded-sm" />
               <span className="absolute -bottom-1 -right-1 rounded-sm bg-primary px-1 text-[9px] font-bold text-primary-foreground">IA</span>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -250,8 +252,8 @@ const Index = () => {
                     "Pergunte o que quiser com segurança. Seus dados são criptografados e suas conversas são privadas até dos próprios especialistas.",
                   ],
                 },
-              ].map((col) => (
-                <div key={col.title} className="max-w-xs mx-auto md:mx-0">
+              ].map((col, idx) => (
+                <Reveal key={col.title} delay={idx * 150} className="max-w-xs mx-auto md:mx-0">
                   <h3 className="text-center text-[14px] font-bold leading-snug tracking-wide">
                     {col.title}
                   </h3>
@@ -263,11 +265,11 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </Reveal>
               ))}
             </div>
             <div className="mt-16 flex justify-center border-t border-white/15 pt-12">
-              <button className="rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90">
+              <button className="group relative overflow-hidden rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:tracking-wider hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)]">
                 ASSINAR AGORA
               </button>
             </div>
@@ -278,9 +280,9 @@ const Index = () => {
       {/* Process steps */}
       <section className="px-6 py-20 lg:px-10">
         <div className="mx-auto max-w-[1200px]">
-          <h2 className="text-center text-[28px] font-bold md:text-[36px]">
+          <Reveal as="h2" className="text-center text-[28px] font-bold md:text-[36px]">
             Um processo simples para tirar suas dúvidas
-          </h2>
+          </Reveal>
           <div className="mt-14 grid gap-10 md:grid-cols-4 md:gap-6">
             {[
               ["Escolha seu especialista", "Encontre quem entende do assunto que você quer aprender ou conversar, baseado nos seus interesses."],
@@ -288,19 +290,19 @@ const Index = () => {
               ["Acompanhe seu progresso", "Crie a sua própria trilha de aprendizado, fazendo anotações e destacando insights importantes dos seus temas favoritos."],
               ["Expanda suas áreas de interesse", "Tenha uma versão dos seus especialistas favoritos disponíveis 24h para você em diferentes áreas de atuação."],
             ].map(([title, desc], i) => (
-              <div key={i}>
-                <div className="mb-4 border-t border-foreground/30 pt-4 flex items-center gap-3">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-sm bg-chip-pink text-[12px] font-bold text-foreground">
+              <Reveal key={i} delay={i * 120} className="group">
+                <div className="mb-4 border-t border-foreground/30 pt-4 flex items-center gap-3 transition-colors duration-300 group-hover:border-primary">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-sm bg-chip-pink text-[12px] font-bold text-foreground transition-transform duration-300 ease-out-expo group-hover:scale-110">
                     {i + 1}
                   </span>
                   <h3 className="text-[14px] font-bold">{title}</h3>
                 </div>
                 <p className="text-[13px] leading-relaxed text-foreground/75">{desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
           <div className="mt-14 flex justify-center">
-            <button className="rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90">
+            <button className="rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:tracking-wider hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)]">
               CONVERSE AGORA
             </button>
           </div>
@@ -310,30 +312,30 @@ const Index = () => {
       {/* Connect / community */}
       <section className="px-6 pt-8 pb-20 md:py-20 lg:px-10">
         <div className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-2">
-          <div>
+          <Reveal>
             <h2 className="text-[40px] font-bold leading-[1.05] tracking-tight md:text-[52px]">
               Conecte seu conhecimento à comunidade que importa
             </h2>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/80">
               Compartilhe seu conhecimento com quem realmente valoriza sua experiência e conecte-se a uma comunidade engajada.
             </p>
-            <button className="mt-8 rounded-sm bg-primary px-8 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90">
+            <button className="mt-8 rounded-sm bg-primary px-8 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:tracking-wider hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)]">
               EXPANDA SUA INFLUÊNCIA
             </button>
-          </div>
+          </Reveal>
           <div className="space-y-8">
             {[
               ["INFLUENCIADORES & CRIADORES", "Transforme sua rotina, dicas e conteúdos em aprendizado interativo. Seus seguidores podem conversar com sua versão avatar, aprendendo de forma personalizada a partir de seus vídeos, textos e postagens."],
               ["PROFISSIONAIS DO MERCADO", "Escale sua presença e complemente cursos, workshops ou serviços. Seus mentorados podem tirar dúvidas e interagir sempre que precisarem, com respostas baseadas no seu conhecimento e estilo único."],
               ["PROFESSORES & ACADÊMICOS", "Alimente a IA com aulas, artigos, pesquisas ou livros. Seus alunos podem continuar interagindo com o conteúdo e manter o diálogo ativo mesmo fora da sala de aula."],
-            ].map(([title, desc]) => (
-              <div key={title}>
+            ].map(([title, desc], idx) => (
+              <Reveal key={title} delay={idx * 150} className="group">
                 <div className="flex items-center gap-2">
-                  <span className="h-3 w-3 bg-primary"></span>
+                  <span className="h-3 w-3 bg-primary transition-transform duration-300 ease-out-expo group-hover:scale-150" />
                   <h3 className="text-[14px] font-bold tracking-wide">{title}</h3>
                 </div>
                 <p className="mt-3 text-[13px] leading-relaxed text-foreground/80">{desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
