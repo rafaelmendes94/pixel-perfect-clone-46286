@@ -271,20 +271,6 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="relative">
-        {/* Skyline of solid black vertical bars */}
-        <div
-          aria-hidden
-          className="relative h-[120px] w-full overflow-hidden md:h-[160px]"
-          style={{
-            backgroundColor: "hsl(var(--dark-bg))",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent 0%, transparent 1%, black 1%, black 3%, transparent 3%, transparent 6%, black 6%, black 9%, transparent 9%, transparent 13%, black 13%, black 18%, transparent 18%, transparent 22%, black 22%, black 24%, transparent 24%, transparent 32%, black 32%, black 35%, transparent 35%, transparent 41%, black 41%, black 45%, transparent 45%, transparent 50%, black 50%, black 53%, transparent 53%, transparent 60%, black 60%, black 63%, transparent 63%, transparent 70%, black 70%, black 76%, transparent 76%, transparent 80%, black 80%, black 84%, transparent 84%, transparent 88%, black 88%, black 95%, transparent 95%, transparent 97%, black 97%, black 99%, transparent 99%)",
-            maskImage:
-              "linear-gradient(to right, transparent 0%, transparent 1%, black 1%, black 3%, transparent 3%, transparent 6%, black 6%, black 9%, transparent 9%, transparent 13%, black 13%, black 18%, transparent 18%, transparent 22%, black 22%, black 24%, transparent 24%, transparent 32%, black 32%, black 35%, transparent 35%, transparent 41%, black 41%, black 45%, transparent 45%, transparent 50%, black 50%, black 53%, transparent 53%, transparent 60%, black 60%, black 63%, transparent 63%, transparent 70%, black 70%, black 76%, transparent 76%, transparent 80%, black 80%, black 84%, transparent 84%, transparent 88%, black 88%, black 95%, transparent 95%, transparent 97%, black 97%, black 99%, transparent 99%)",
-          }}
-        >
-          <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-dark-bg" style={{ WebkitMaskImage: "none", maskImage: "none" }} />
-        </div>
 
         <div className="bg-dark-bg text-dark-fg">
           <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-4 px-6 py-5 md:flex-row md:justify-between lg:px-10">
