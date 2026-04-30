@@ -152,18 +152,18 @@ const Index = () => {
             className="absolute inset-0 md:hidden"
             style={{
               background:
-                "linear-gradient(to bottom, hsl(var(--background)) 0%, hsl(var(--background) / 0.85) 30%, hsl(var(--background) / 0.2) 55%, transparent 75%)",
+                "linear-gradient(to bottom, hsl(var(--background) / 0.85) 0%, hsl(var(--background) / 0.5) 30%, transparent 60%, hsl(var(--background) / 0.5) 90%)",
             }}
           />
-          <div className="relative mx-auto grid h-full max-w-[1400px] items-end gap-10 px-6 pb-10 text-center md:items-center md:pb-0 md:text-left lg:grid-cols-2 lg:px-10">
+          <div className="relative mx-auto grid h-full max-w-[1400px] items-start gap-10 px-6 pt-16 text-center md:items-center md:pt-0 md:text-left lg:grid-cols-2 lg:px-10">
             <div className="relative z-10 mx-auto md:mx-0">
               <p className="mb-4 text-[13px] font-semibold tracking-[0.08em] text-primary md:mb-6">
                 ESPECIALISTA COM IA
               </p>
-              <h1 className="text-[24px] font-bold leading-[1.1] tracking-tight md:text-[56px] lg:text-[64px]">
+              <h1 className="text-[28px] font-bold leading-[1.1] tracking-tight md:text-[56px] lg:text-[64px]">
                 Tem uma dúvida ou quer aprender algo novo? Fale com a IA de um especialista de verdade.
               </h1>
-              <p className="mx-auto mt-4 max-w-md text-[12px] leading-relaxed text-foreground/80 md:mx-0 md:mt-6 md:text-[15px]">
+              <p className="mx-auto mt-4 max-w-md text-[14px] leading-relaxed text-foreground/80 md:mx-0 md:mt-6 md:text-[15px]">
                 Uma inteligência artificial com conteúdo criado por quem é autoridade no assunto. Rápido, confiável e direto ao ponto
               </p>
               <form
