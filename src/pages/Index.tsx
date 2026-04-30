@@ -217,31 +217,11 @@ const Index = () => {
         />
         <div className="relative mx-auto max-w-[1400px] px-6 py-20 lg:px-10 lg:py-28">
           <p className="mb-12 text-center text-[13px] font-semibold tracking-[0.1em] text-primary">
-            PARA AQUELES QUE BUSCAM RESPOSTAS REAIS
+            {t.dark.tag}
           </p>
           <div className="border-t border-white/15 pt-12">
             <div className="grid gap-12 md:grid-cols-3 md:gap-8">
-              {[
-                {
-                  title: "CHEGA DE USAR IAS COM FONTES DESCONHECIDAS",
-                  items: [
-                    "Esqueça respostas de fontes desconhecidas. Você conversa com a versão digital de criadores de conteúdo que você conhece, confia e acompanha, especialistas em diversos temas.",
-                  ],
-                },
-                {
-                  title: "UMA NOVA FORMA DE APRENDER E TIRAR SUAS DÚVIDAS",
-                  items: [
-                    "Esqueça o conteúdo estático. Aqui você interage diretamente com seu criador de conteúdo favorito.",
-                    "Não existe script. Você pergunta livremente, e as respostas vêm do conhecimento e da forma única de cada especialista.",
-                  ],
-                },
-                {
-                  title: "PROTEÇÃO E PRIVACIDADE PARA SUAS CONVERSAS",
-                  items: [
-                    "Pergunte o que quiser com segurança. Seus dados são criptografados e suas conversas são privadas até dos próprios especialistas.",
-                  ],
-                },
-              ].map((col, idx) => (
+              {t.dark.cols.map((col, idx) => (
                 <Reveal key={col.title} delay={idx * 150} className="max-w-xs mx-auto md:mx-0">
                   <h3 className="text-center text-[14px] font-bold leading-snug tracking-wide">
                     {col.title}
@@ -259,7 +239,7 @@ const Index = () => {
             </div>
             <div className="mt-16 flex justify-center border-t border-white/15 pt-12">
               <button className="group relative overflow-hidden rounded-sm bg-primary px-10 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground transition-all duration-300 ease-out-expo hover:tracking-wider hover:shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)]">
-                ASSINAR AGORA
+                {t.dark.cta}
               </button>
             </div>
           </div>
