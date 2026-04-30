@@ -5,6 +5,7 @@ import lateralDark from "@/assets/versio/lateral-dark-mode_2266b9c0b713.png";
 import avatarMan from "@/assets/versio/image_6e1f787d00c0.png";
 import avatarWoman from "@/assets/versio/image_7cba69393704.png";
 import avatarMan2 from "@/assets/versio/image_3ef650545b5c.png";
+import njrLogo from "@/assets/versio/njr-edutech.png";
 
 const VersioLogo = ({ className = "" }: { className?: string }) => (
   <div className={`flex items-center gap-1.5 ${className}`}>
@@ -270,11 +271,30 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="relative">
-        <img src={bgFooter} alt="" className="block w-full select-none" />
+        {/* Skyline of vertical bars using bg image */}
+        <div
+          aria-hidden
+          className="relative h-[140px] w-full overflow-hidden md:h-[180px]"
+          style={{
+            backgroundImage: `url(${bgFooter})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, transparent 1%, black 1%, black 3%, transparent 3%, transparent 6%, black 6%, black 9%, transparent 9%, transparent 13%, black 13%, black 18%, transparent 18%, transparent 22%, black 22%, black 24%, transparent 24%, transparent 32%, black 32%, black 35%, transparent 35%, transparent 41%, black 41%, black 45%, transparent 45%, transparent 50%, black 50%, black 53%, transparent 53%, transparent 60%, black 60%, black 63%, transparent 63%, transparent 70%, black 70%, black 76%, transparent 76%, transparent 80%, black 80%, black 84%, transparent 84%, transparent 88%, black 88%, black 95%, transparent 95%, transparent 97%, black 97%, black 99%, transparent 99%)",
+            maskImage:
+              "linear-gradient(to right, transparent 0%, transparent 1%, black 1%, black 3%, transparent 3%, transparent 6%, black 6%, black 9%, transparent 9%, transparent 13%, black 13%, black 18%, transparent 18%, transparent 22%, black 22%, black 24%, transparent 24%, transparent 32%, black 32%, black 35%, transparent 35%, transparent 41%, black 41%, black 45%, transparent 45%, transparent 50%, black 50%, black 53%, transparent 53%, transparent 60%, black 60%, black 63%, transparent 63%, transparent 70%, black 70%, black 76%, transparent 76%, transparent 80%, black 80%, black 84%, transparent 84%, transparent 88%, black 88%, black 95%, transparent 95%, transparent 97%, black 97%, black 99%, transparent 99%)",
+          }}
+        >
+          {/* Bottom alignment bar */}
+          <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-dark-bg" style={{ WebkitMaskImage: "none", maskImage: "none" }} />
+        </div>
+
         <div className="bg-dark-bg text-dark-fg">
-          <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-4 px-6 py-6 md:flex-row md:justify-between lg:px-10">
+          <div className="mx-auto flex max-w-[1400px] flex-col items-center gap-4 px-6 py-5 md:flex-row md:justify-between lg:px-10">
             <div className="flex items-center gap-4 text-[12px] text-white/70">
               <VersioLogo className="text-white" />
+              <span className="h-6 w-px bg-white/25" />
+              <img src={njrLogo} alt="NJR Edutech" className="h-8 w-auto" />
               <span className="opacity-60">© 2025</span>
             </div>
             <div className="flex items-center gap-6 text-[12px] text-white/70">
