@@ -63,47 +63,50 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero */}
-      <section
-        className="relative overflow-hidden bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${bgHeader})` }}
-      >
-        <div className="mx-auto grid max-w-[1400px] gap-10 px-6 pb-24 pt-10 lg:grid-cols-2 lg:px-10 lg:pt-16 min-h-[640px]">
-          <div className="relative z-10">
-            <p className="mb-6 text-[13px] font-semibold tracking-[0.08em] text-primary">
-              ESPECIALISTA COM IA
-            </p>
-            <h1 className="text-[44px] font-bold leading-[1.05] tracking-tight md:text-[56px] lg:text-[64px]">
-              Tem uma dúvida ou quer aprender algo novo? Fale com a IA de um especialista de verdade.
-            </h1>
-            <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/80">
-              Uma inteligência artificial com conteúdo criado por quem é autoridade no assunto. Rápido, confiável e direto ao ponto
-            </p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="mt-8 flex max-w-lg overflow-hidden rounded-sm border border-input bg-background/80 backdrop-blur"
-            >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="e-mail"
-                className="flex-1 bg-transparent px-4 py-3 text-[14px] outline-none placeholder:text-muted-foreground"
-              />
-              <button
-                type="submit"
-                className="bg-primary px-6 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90"
+      {/* Hero (sticky parallax) */}
+      <div className="relative" style={{ height: "100vh" }}>
+        <section
+          className="sticky top-0 h-screen w-full overflow-hidden rounded-3xl bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgHeader})` }}
+        >
+          <div className="mx-auto grid h-full max-w-[1400px] items-center gap-10 px-6 lg:grid-cols-2 lg:px-10">
+            <div className="relative z-10">
+              <p className="mb-6 text-[13px] font-semibold tracking-[0.08em] text-primary">
+                ESPECIALISTA COM IA
+              </p>
+              <h1 className="text-[44px] font-bold leading-[1.05] tracking-tight md:text-[56px] lg:text-[64px]">
+                Tem uma dúvida ou quer aprender algo novo? Fale com a IA de um especialista de verdade.
+              </h1>
+              <p className="mt-6 max-w-md text-[15px] leading-relaxed text-foreground/80">
+                Uma inteligência artificial com conteúdo criado por quem é autoridade no assunto. Rápido, confiável e direto ao ponto
+              </p>
+              <form
+                onSubmit={(e) => e.preventDefault()}
+                className="mt-8 flex max-w-lg overflow-hidden rounded-sm border border-input bg-background/80 backdrop-blur"
               >
-                COMECE AGORA
-              </button>
-            </form>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="e-mail"
+                  className="flex-1 bg-transparent px-4 py-3 text-[14px] outline-none placeholder:text-muted-foreground"
+                />
+                <button
+                  type="submit"
+                  className="bg-primary px-6 py-3 text-[13px] font-semibold tracking-wide text-primary-foreground hover:opacity-90"
+                >
+                  COMECE AGORA
+                </button>
+              </form>
+            </div>
+            <div aria-hidden className="hidden lg:block" />
           </div>
-          <div aria-hidden className="hidden lg:block" />
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Subhero + chat */}
-      <section className="px-6 py-20 lg:px-10">
+      <section className="relative z-10 -mt-8 rounded-t-3xl bg-background px-6 py-20 lg:px-10">
+
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-[26px] font-bold leading-tight md:text-[34px]">
             Aprenda no seu ritmo, com quem você admira, em conversas que geram resultados baseados no conteúdo e identidade do especialista.
